@@ -104,9 +104,6 @@ jobs:
         start: php artisan serve
         browser: ${{ matrix.browser }}
         headless: true
-        record: true
-        parallel: true
-        group: Azure DevOps CI ${{ matrix.browser }}
         config: baseUrl=http://localhost:8000
         wait-on: http://localhost:8000
       env:

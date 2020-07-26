@@ -86,7 +86,7 @@ elif [ -n "${ASSETS_GITHUB_TOKEN:-}" ]; then
   if [ -z "${PULL_REQUEST_REPOSITORY:-}" ] || [ "$PULL_REQUEST_REPOSITORY" == "null" ]; then
     echo -e "\033[0;31mError with github api call\033[0;37m"
     exit 1
-  elif [ "$PULL_REQUEST_REPOSITORY" == "$REPOSITORY_OWNER" ]; then
+  elif [ "$PULL_REQUEST_REPOSITORY" == "guessit-dev/monica-priv" ]; then
     PULL_REQUEST_BRANCH=$PULL_REQUEST_HEADBRANCH
   else
     echo -e "\033[0;31mMonica asset are not up to date.\033[0;37m"
